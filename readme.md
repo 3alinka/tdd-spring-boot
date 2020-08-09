@@ -12,15 +12,25 @@ This is one kind of TDD in which an integration test will be written first.
 ## Integration Test
 This is a whole test. Technically it means, an http client will send something to the api, and verify the result.
 It does not care what are running behind the scene.
+```
+gradle test --tests ahlev.location.IntegrationTest
+```
 
 ## Controller Test
 In order not to boot up a whole Spring, a mocked service is used here.
 So instead of talking with a real service, this controller test just work with the mocked service.
 Doing this way, we don't care about whatever input given by a service, we just focus on processing it.
+```
+gradle test --tests ahlev.location.LocationControllerTest
+```
+
 
 ## Service Test
 The Service Test is also independent from the whole tree. The idea here is to mock a repository and pass it into the service.
 So that it won't depend on the real repository. 
+```
+gradle test --tests ahlev.location.LocationServiceTest
+```
 
 ## Repository Test
 Spring provides annotation @DataJpaTest to work on a repository test. This means, the test could use the real database configuration.
@@ -30,6 +40,9 @@ we could make sure whatever errors we might come across when deploying to produc
 and that is a bonus for us; because we could catch the errors earlier. 
 One bullet point explained by the author of the video presentation below is the benefit of using the entity manager.
 This could assure that the object to verify is absolutely from the database and not from a cache.
+```
+gradle test --tests ahlev.location.LocationRepositoryTest
+```
 
 ## Reference
 Thank to the great video presentation of Sannidhi Jalukar and Madhura Bhave.<br/>
