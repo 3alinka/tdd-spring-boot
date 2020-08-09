@@ -32,5 +32,5 @@ One bullet point explained by the author of the video presentation below is the 
 This could assure that the object to verify is absolutely from the database and not from a cache.
 
 ## Reference
-Thank to the great video presentation of Sannidhi Jalukar and Madhura Bhave.
-[Test Driven Development with Spring Boot - Sannidhi Jalukar, Madhura Bhave] (https://tanzu.vmware.com/content/springone-platform-2017/test-driven-development-with-spring-boot-sannidhi-jalukar-madhura-bhave)
+Thank to the great video presentation of Sannidhi Jalukar and Madhura Bhave.<br/>
+[Test Driven Development with Spring Boot - Sannidhi Jalukar, Madhura Bhave](https://tanzu.vmware.com/content/springone-platform-2017/test-driven-development-with-spring-boot-sannidhi-jalukar-madhura-bhave)
