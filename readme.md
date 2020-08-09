@@ -2,7 +2,7 @@
 I find it hard to run along with Spring; because it is big and multi-layered. 
 The testing libraries are just everywhere. 
 Without a proper library with a correct setting, the TDD is just gone crazy. 
-So I decided to create this sample to be my reference, so that I won't have any of the above difficulties anymore. 
+So I decide to create this sample to be my reference, so that I won't have any of the above difficulties anymore. 
 Spring is big, and if you're not careful enough, you might end up firing a whole engine which is going to take a little bit long just to execute a test.
 That's why each layer test should not invoke a whole engine to boot.
 
