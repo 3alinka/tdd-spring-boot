@@ -7,7 +7,6 @@ package ahlev.location.controller;
  */
 
 import java.util.List;
-import java.util.ArrayList;
 import ahlev.location.domain.Country;
 import ahlev.location.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class LocationController {
     LocationService locationService;
 
     @GetMapping("/countries")
-    private List<Country> getCountries() {
+    public List<Country> getCountries() {
         return locationService.getCountries();
     }
 }

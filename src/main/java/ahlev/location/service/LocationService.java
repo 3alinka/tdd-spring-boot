@@ -8,17 +8,15 @@ package ahlev.location.service;
 
 import ahlev.location.domain.Country;
 import ahlev.location.repository.LocationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class LocationService {
 
-    private LocationRepository locationRepository;
+    private final LocationRepository locationRepository;
 
-    public LocationService(LocationRepository locationRepository) {
+    public LocationService(final LocationRepository locationRepository) {
         this.locationRepository = locationRepository;
     }
 

@@ -17,14 +17,19 @@ import java.io.Serializable;
 @MappedSuperclass
 public class AbstractEntity implements Serializable {
 
-        @Id
-        @GeneratedValue
-        private Long id;
+    /**
+    *
+    */
+    private static final long serialVersionUID = 1L;
 
-        @Version
-        private int version;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-        public boolean isPersisted() {
-            return this.id != null;
-        }
+    @Version
+    private int version;
+
+    public boolean isPersisted() {
+        return this.id != null;
+    }
 }

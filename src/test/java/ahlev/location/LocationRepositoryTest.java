@@ -16,12 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class LocationRepositoryTest {
 
     @Autowired
@@ -32,7 +31,7 @@ public class LocationRepositoryTest {
 
     @Test
     public void getCountries_shouldReturnCountries() {
-        Country savedCountries = entityManager.persistFlushFind(new Country("Cambodia"));
+        entityManager.persistFlushFind(new Country("Cambodia"));
         List<Country> countries = locationRepository.findAll();
         assertTrue(countries.size() == 1 && countries.get(0).getName().equals("Cambodia"));
     }

@@ -19,13 +19,19 @@ import javax.validation.constraints.Size;
 @Entity(name = "country")
 public class Country extends AbstractEntity {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     @Size(min = 3, max = 32, message = "{name.SizeRange}")
     @NotNull(message = "{name.NotNull}")
     @NotEmpty(message = "{name.NotEmpty}")
     @Column(name = "name", unique = true)
     private String name;
 
-    public Country() {}
+    public Country() {
+    }
 
     public Country(String name) {
         this.name = name;

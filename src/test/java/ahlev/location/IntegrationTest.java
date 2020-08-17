@@ -3,12 +3,9 @@ package ahlev.location;
 import java.util.ArrayList;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import ahlev.location.domain.Country;
-import ahlev.location.service.LocationService;
 import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +21,7 @@ public class IntegrationTest {
 	@Test
 	public void test_to_get_all_countries() {
 
-		ResponseEntity<ArrayList> response = restTemplate.getForEntity("/countries", ArrayList.class);
+		final ResponseEntity<ArrayList> response = restTemplate.getForEntity("/countries", ArrayList.class);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 	}
 }
